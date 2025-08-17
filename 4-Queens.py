@@ -12,4 +12,5 @@ def solve_nqueen(n, row=0, board=[]):
         if is_safe(board, row, col):
             solve_nqueen(n, row+1, board+[col])
 
-solve_nqueen(4)
+n = int(input("Enter number of queens: "))
+solve_nqueen(n)
