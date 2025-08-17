@@ -25,9 +25,15 @@ void quickSort(int arr[], int low, int high) {
 }
 
 int main(){
-    int arr1[] = {5,2,9,1,7,6};
-    int arr2[] = {5,2,9,1,7,6};
-    int n=6;
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr1[n], arr2[n];
+    cout << "Enter elements:\n";
+    for(int i=0;i<n;i++){ 
+        cin >> arr1[i]; 
+        arr2[i]=arr1[i]; 
+    }
 
     clock_t start = clock();
     bubbleSort(arr1,n);
