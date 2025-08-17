@@ -12,8 +12,13 @@ pair<int,int> findMinMax(int arr[], int low, int high) {
 }
 
 int main() {
-    int arr[] = {5, 8, 1, 9, 2, 7};
-    int n = 6;
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter elements:\n";
+    for(int i=0;i<n;i++) cin >> arr[i];
+
     auto ans = findMinMax(arr, 0, n-1);
     cout << "Min: " << ans.first << " Max: " << ans.second;
 }
