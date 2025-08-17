@@ -7,6 +7,6 @@ def subset_sum(arr, target, i=0, subset=[]):
     subset_sum(arr, target, i+1, subset+[arr[i]])
     subset_sum(arr, target, i+1, subset)
 
-arr = [3, 4, 5, 2]
-target = 7
+arr = list(map(int, input("Enter elements: ").split()))
+target = int(input("Enter target sum: "))
 subset_sum(arr, target)
