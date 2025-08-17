@@ -13,8 +13,15 @@ int binarySearch(int arr[], int n, int x) {
 }
 
 int main() {
-    int arr[] = {2, 4, 6, 8, 10, 12, 14};
-    int n = 7, x = 10;
+    int n, x;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter sorted elements:\n";
+    for(int i=0;i<n;i++) cin >> arr[i];
+    cout << "Enter element to search: ";
+    cin >> x;
+
     int result = binarySearch(arr, n, x);
     if (result != -1) cout << "Found at index " << result;
     else cout << "Not Found";
