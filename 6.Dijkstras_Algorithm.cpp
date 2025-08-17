@@ -23,9 +23,18 @@ void dijkstra(vector<vector<pair<int,int>>> &graph, int src){
 }
 
 int main(){
-    vector<vector<pair<int,int>>> graph(4);
-    graph[0]={{1,4},{2,1}};
-    graph[1]={{3,1}};
-    graph[2]={{1,2},{3,5}};
-    Dijkstra(graph,0);
+    int n,e;
+    cout << "Enter number of vertices and edges: ";
+    cin >> n >> e;
+    vector<vector<pair<int,int>>> graph(n);
+    cout << "Enter edges (u v w):\n";
+    for(int i=0;i<e;i++){
+        int u,v,w;
+        cin >> u >> v >> w;
+        graph[u].push_back({v,w});
+    }
+    int src;
+    cout << "Enter source vertex: ";
+    cin >> src;
+    dijkstra(graph,src);
 }
