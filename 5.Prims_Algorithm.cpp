@@ -26,12 +26,11 @@ int primMST(vector<vector<int>> graph) {
 }
 
 int main(){
-    vector<vector<int>> graph = {
-        {0,2,0,6,0},
-        {2,0,3,8,5},
-        {0,3,0,0,7},
-        {6,8,0,0,9},
-        {0,5,7,9,0}
-    };
+    int n;
+    cout << "Enter number of vertices: ";
+    cin >> n;
+    vector<vector<int>> graph(n, vector<int>(n));
+    cout << "Enter adjacency matrix:\n";
+    for(int i=0;i<n;i++) for(int j=0;j<n;j++) cin >> graph[i][j];
     cout << "MST Cost: " << primMST(graph);
 }
