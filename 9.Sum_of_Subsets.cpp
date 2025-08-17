@@ -19,8 +19,14 @@ void subsetSum(vector<int> &arr, int target, int i, vector<int> &subset){
 }
 
 int main(){
-    vector<int> arr={3,4,5,2};
-    int target=7;
+    int n,target;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    vector<int> arr(n);
+    cout << "Enter elements:\n";
+    for(int i=0;i<n;i++) cin >> arr[i];
+    cout << "Enter target sum: ";
+    cin >> target;
     vector<int> subset;
     subsetSum(arr,target,0,subset);
 }
