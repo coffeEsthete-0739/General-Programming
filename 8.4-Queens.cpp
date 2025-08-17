@@ -23,6 +23,9 @@ void solve(int board[], int row, int n){
 }
 
 int main(){
-    int board[4];
-    solve(board,0,4);
+    int n;
+    cout << "Enter number of queens: ";
+    cin >> n;
+    int board[n];
+    solve(board,0,n);
 }
