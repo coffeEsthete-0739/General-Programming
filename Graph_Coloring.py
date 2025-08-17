@@ -14,10 +14,9 @@ def graph_coloring(graph, m, node=0, colors=[]):
                 return True
     return False
 
-graph = [
-    [0,1,1,1],
-    [1,0,1,0],
-    [1,1,0,1],
-    [1,0,1,0]
-]
-graph_coloring(graph, 3)
+n = int(input("Enter number of vertices: "))
+print("Enter adjacency matrix:")
+graph = [list(map(int, input().split())) for _ in range(n)]
+m = int(input("Enter number of colors: "))
+if not graph_coloring(graph, m):
+    print("No solution found")
