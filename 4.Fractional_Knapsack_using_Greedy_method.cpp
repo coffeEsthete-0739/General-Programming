@@ -25,7 +25,14 @@ double fractionalKnapsack(vector<Item> items, int W) {
 }
 
 int main(){
-    vector<Item> items = {{60,10},{100,20},{120,30}};
-    int W=50;
+    int n, W;
+    cout << "Enter number of items: ";
+    cin >> n;
+    vector<Item> items(n);
+    cout << "Enter value and weight for each item:\n";
+    for(int i=0;i<n;i++) cin >> items[i].value >> items[i].weight;
+    cout << "Enter capacity of knapsack: ";
+    cin >> W;
+
     cout << "Max Value: " << fractionalKnapsack(items,W);
 }
